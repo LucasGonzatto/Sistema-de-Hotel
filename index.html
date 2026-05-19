@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Sistema de Hotel</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>Clientes Ativos no Hotel</h1>
+
+    <!-- FORMULÁRIO -->
+    <form id="cliente-form">
+
+      <input
+        type="text"
+        id="descricao"
+        placeholder="Nome do cliente"
+        required
+      >
+
+      <input
+        type="date"
+        id="check_in"
+        required
+      >
+
+      <input
+        type="date"
+        id="check_out"
+        required
+      >
+
+      <input
+        type="number"
+        id="quarto"
+        placeholder="Número do quarto"
+        min="0"
+        max="100"
+        required
+      >
+
+      <select id="status">
+
+        <option value="ocupado">
+          Ocupado
+        </option>
+
+        <option value="livre">
+          Livre
+        </option>
+
+        <option value="reservado">
+          Reservado
+        </option>
+
+      </select>
+
+      <button type="submit">
+        Cadastrar
+      </button>
+
+    </form>
+
+    <!-- TABELA -->
+    <table>
+
+      <thead>
+
+        <tr>
+
+          <th>Nome</th>
+
+          <th>Check-in</th>
+
+          <th>Check-out</th>
+
+          <th>Quarto</th>
+
+          <th>Status</th>
+
+          <!-- NOVA COLUNA -->
+          <th>Ações</th>
+
+        </tr>
+
+      </thead>
+
+      <tbody id="client-table-body">
+
+        <!-- CLIENTES APARECEM AQUI -->
+
+      </tbody>
+
+    </table>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
